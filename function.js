@@ -7,3 +7,9 @@ var SquareAllArray=function(numbers){
     }
     console.log(newArray);
 }
+//1st
+function square(x) { return x * x; }
+function double(x) { return x * 2; }
+let composedValue(square,double,5);
+console.log(composedValue(square,double,5));
+
