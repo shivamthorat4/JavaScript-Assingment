@@ -7,11 +7,13 @@ var SquareAllArray=function(numbers){
     }
     console.log(newArray);
 }
+
 //1st
 function square(x) { return x * x; }
 function double(x) { return x * 2; }
 let composedValue(square,double,5);
 console.log(composedValue(square,double,5));
+
 
 //composed value
 
@@ -42,12 +44,30 @@ function find(arr,isEven){
     }
 }
 
+//even advanced
+function isEven(num){return (num%2==0);}
+
+function find(arr,isEven){
+
+    if(isEven(arr[0])){
+        console.log(arr[0]);
+    }
+    else{
+        find(arr.slice(-(arr.length-1)),isEven);
+    }
+}
+
 const arr=[1,3,5,4,2];
 console.log(isEven(3));//-->false
 console.log(isEven(4));//-->true
 find(arr,isEven);//-->4
 
-//map
+const arr=[1,3,5,4,2];
+console.log(isEven(3));//-->false
+console.log(isEven(4));//-->true
+find(arr,isEven);//-->4
+
+//map advanced
 
 function square(x){return x*x;}
 function map(arr,square){
@@ -67,5 +87,19 @@ function map1(arr,Math){
         outp.push(Math.sqrt(arr[i]));
     }
     console.log(outp)
+}
+map1([1,4,9,16,25],Math);//-->[1,2,3,4,5]
+
+//map 
+function square(x){return x*x;}
+function map(arr,square){
+    
+}
+
+const arr=[1,2,3,4,5];
+map(arr,square);//-->[1,4,9,16,25]
+
+function map1(arr,Math){
+    
 }
 map1([1,4,9,16,25],Math);//-->[1,2,3,4,5]
